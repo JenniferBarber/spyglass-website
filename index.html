@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spyglass Advisory · Business Transformation at Execution Inflection Points</title>
+  <meta name="description" content="Spyglass Advisory partners with PE-backed and founder-led companies at execution inflection points. Strategy through execution. Cross-border, regulated, and first-of-kind environments." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1F3A5F;
+      --navy-dark: #15273F;
+      --accent: #3B6EA5;
+      --panel: #EAF0F6;
+      --panel-warm: #F5F0E6;
+      --warm: #8B5E3C;
+      --bg: #FFFFFF;
+      --bg-alt: #FAFBFC;
+      --text: #1A1A1A;
+      --muted: #6B7280;
+      --border: #D9DEE6;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --serif: 'Source Serif 4', Georgia, serif;
+      --max: 1100px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 32px; }
+
+    /* Nav */
+    nav.site {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: saturate(180%) blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav.site .container {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 18px; padding-bottom: 18px;
+    }
+    .wordmark {
+      font-family: var(--serif);
+      font-size: 22px; font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--navy); text-decoration: none;
+    }
+    .wordmark span { color: var(--accent); font-style: italic; font-weight: 400; }
+    .nav-links { display: flex; gap: 36px; }
+    .nav-links a {
+      font-size: 15px; color: var(--text); text-decoration: none;
+      font-weight: 500; transition: color 120ms;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    @media (max-width: 720px) { .nav-links { display: none; } }
+
+    /* Hero */
+    section.hero {
+      padding: 120px 0 100px;
+      background: linear-gradient(180deg, #FFFFFF 0%, var(--bg-alt) 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .eyebrow {
+      font-size: 13px; letter-spacing: 0.18em;
+      text-transform: uppercase; font-weight: 600;
+      color: var(--accent); margin-bottom: 24px;
+    }
+    h1.hero-title {
+      font-family: var(--serif);
+      font-size: clamp(40px, 5.5vw, 64px);
+      line-height: 1.08; font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 28px;
+      letter-spacing: -0.01em;
+      max-width: 18ch;
+    }
+    h1.hero-title em { font-style: italic; color: var(--accent); }
+    .hero-sub {
+      font-size: 21px; line-height: 1.55; color: var(--text);
+      max-width: 58ch; margin-bottom: 36px;
+    }
+    .hero-tagline {
+      font-family: var(--serif);
+      font-size: 18px; font-style: italic;
+      color: var(--accent); font-weight: 500;
+      letter-spacing: 0.02em;
+      padding: 16px 0 8px;
+      border-left: 3px solid var(--navy);
+      padding-left: 20px;
+      max-width: 52ch;
+      margin-bottom: 44px;
+    }
+    .cta-row { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      font-size: 15px; font-weight: 600;
+      text-decoration: none; border-radius: 4px;
+      transition: all 150ms;
+    }
+    .btn-primary { background: var(--navy); color: #FFFFFF; }
+    .btn-primary:hover { background: var(--navy-dark); }
+    .btn-secondary {
+      background: transparent; color: var(--navy);
+      border: 1.5px solid var(--navy);
+    }
+    .btn-secondary:hover { background: var(--panel); }
+
+    /* Section base */
+    section { padding: 100px 0; }
+    section.alt { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    h2.section-title {
+      font-family: var(--serif);
+      font-size: clamp(32px, 4vw, 44px);
+      line-height: 1.15; font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 18px;
+      letter-spacing: -0.005em;
+    }
+    .section-intro {
+      font-size: 18px; color: var(--muted);
+      max-width: 60ch; margin-bottom: 56px;
+      line-height: 1.6;
+    }
+    .section-eyebrow {
+      font-size: 13px; letter-spacing: 0.18em;
+      text-transform: uppercase; font-weight: 600;
+      color: var(--accent); margin-bottom: 16px;
+    }
+
+    /* Three-column grid */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    @media (max-width: 860px) { .grid-3 { grid-template-columns: 1fr; gap: 24px; } }
+
+    .card {
+      padding: 36px 32px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      border-left: 4px solid var(--navy);
+    }
+    .card.warm { border-left-color: var(--warm); background: var(--panel-warm); }
+    .card.panel { background: var(--panel); border-left-color: var(--accent); }
+    .card h3 {
+      font-family: var(--serif);
+      font-size: 21px; font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+    .card p { color: var(--text); font-size: 16px; line-height: 1.6; }
+
+    /* Approach panels */
+    .approach-stack { display: grid; gap: 32px; }
+    .approach-row {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 48px;
+      padding: 36px 0;
+      border-top: 1px solid var(--border);
+    }
+    .approach-row:last-child { border-bottom: 1px solid var(--border); }
+    .approach-label {
+      font-family: var(--serif);
+      font-size: 13px; letter-spacing: 0.18em;
+      text-transform: uppercase; font-weight: 600;
+      color: var(--accent); padding-top: 4px;
+    }
+    .approach-items { display: grid; gap: 20px; }
+    .approach-item { padding-left: 16px; border-left: 2px solid var(--accent); }
+    .approach-item strong { display: block; color: var(--navy); font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+    .approach-item span { color: var(--text); font-size: 16px; line-height: 1.6; }
+    @media (max-width: 720px) {
+      .approach-row { grid-template-columns: 1fr; gap: 16px; }
+    }
+
+    /* Services */
+    .services-grid { display: grid; gap: 28px; }
+    .service {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 40px;
+      padding: 32px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      border-left: 4px solid var(--navy);
+    }
+    .service-meta {
+      font-family: var(--serif);
+      color: var(--accent);
+    }
+    .service-meta .name {
+      font-size: 22px; font-weight: 500;
+      color: var(--navy); margin-bottom: 10px;
+      line-height: 1.25;
+    }
+    .service-meta .price {
+      font-size: 14px; color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+    .service-content p { color: var(--text); margin-bottom: 14px; line-height: 1.65; }
+    .service-content strong { color: var(--navy); }
+    .service-content ul { padding-left: 20px; margin: 12px 0; color: var(--text); }
+    .service-content li { margin-bottom: 6px; line-height: 1.55; font-size: 16px; }
+    .service.specialty { background: var(--panel); border-left-color: var(--accent); }
+    @media (max-width: 720px) {
+      .service { grid-template-columns: 1fr; gap: 16px; padding: 24px; }
+    }
+
+    /* Engagements */
+    .engagement {
+      padding: 36px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 24px;
+      transition: border-color 150ms;
+    }
+    .engagement:hover { border-color: var(--accent); }
+    .engagement-header {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      margin-bottom: 16px; gap: 24px; flex-wrap: wrap;
+    }
+    .engagement h3 {
+      font-family: var(--serif);
+      font-size: 22px; font-weight: 500;
+      color: var(--navy);
+      line-height: 1.3; margin-bottom: 6px;
+    }
+    .engagement .audience {
+      font-size: 12px; letter-spacing: 0.16em;
+      text-transform: uppercase; font-weight: 600;
+      color: var(--accent);
+    }
+    .engagement .summary {
+      color: var(--text); font-size: 16px;
+      line-height: 1.7; margin-bottom: 18px;
+    }
+    .engagement .outcomes {
+      display: flex; gap: 32px; flex-wrap: wrap;
+      padding-top: 18px; border-top: 1px solid var(--border);
+      font-size: 14px;
+    }
+    .engagement .outcomes span {
+      color: var(--muted); display: block; margin-bottom: 4px;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      font-size: 11px; font-weight: 600;
+    }
+    .engagement .outcomes strong { color: var(--navy); font-size: 16px; font-weight: 600; }
+    .read-more {
+      display: inline-block; margin-top: 18px;
+      font-size: 14px; font-weight: 600; color: var(--accent);
+      text-decoration: none; letter-spacing: 0.02em;
+    }
+    .read-more:hover { color: var(--navy); }
+
+    /* Vignettes: supporting engagements */
+    .vignette-section-title {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-top: 72px;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .vignette-section-intro {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 58ch;
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+    .vignettes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .vignette {
+      padding: 28px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      border-left: 3px solid var(--accent);
+    }
+    .vignette-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .vignette h4 {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .vignette p.vignette-body {
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+    .vignette-pattern {
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--accent);
+      font-size: 14px;
+      line-height: 1.5;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    @media (max-width: 720px) {
+      .vignettes-grid { grid-template-columns: 1fr; }
+    }
+
+    /* About */
+    .about-text { font-size: 18px; line-height: 1.7; color: var(--text); max-width: 64ch; }
+    .about-text p { margin-bottom: 20px; }
+    .about-text em { color: var(--accent); font-style: italic; }
+    .credentials {
+      display: flex; gap: 36px; flex-wrap: wrap;
+      margin-top: 40px; padding-top: 32px;
+      border-top: 1px solid var(--border);
+      font-size: 14px; color: var(--muted);
+    }
+    .credentials > div strong {
+      display: block; color: var(--navy); font-size: 13px;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      font-weight: 600; margin-bottom: 6px;
+    }
+
+    /* Contact */
+    .contact-card {
+      background: var(--navy); color: #FFFFFF;
+      padding: 56px 48px; border-radius: 6px;
+      text-align: center;
+    }
+    .contact-card h2 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3.5vw, 36px);
+      font-weight: 500; margin-bottom: 16px;
+      color: #FFFFFF;
+    }
+    .contact-card p {
+      color: rgba(255,255,255,0.85);
+      font-size: 17px; max-width: 52ch;
+      margin: 0 auto 28px;
+    }
+    .contact-card a.email {
+      display: inline-block;
+      font-family: var(--serif);
+      font-size: 22px; color: #FFFFFF;
+      text-decoration: none;
+      padding: 14px 28px;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      border-radius: 4px;
+      transition: all 150ms;
+    }
+    .contact-card a.email:hover {
+      background: #FFFFFF; color: var(--navy);
+    }
+    .contact-card .meta {
+      margin-top: 24px; font-size: 14px;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.04em;
+    }
+
+    /* Footer */
+    footer.site {
+      padding: 56px 0 40px;
+      border-top: 1px solid var(--border);
+      background: var(--bg-alt);
+    }
+    footer.site .container {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      flex-wrap: wrap; gap: 32px;
+    }
+    footer.site .footer-brand .footer-wordmark {
+      font-family: var(--serif);
+      font-size: 22px; font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    footer.site .footer-brand .footer-wordmark span {
+      color: var(--accent); font-style: italic; font-weight: 400;
+    }
+    footer.site .footer-brand .footer-tagline {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 15px;
+      color: var(--accent);
+      letter-spacing: 0.005em;
+    }
+    footer.site .footer-meta {
+      text-align: right;
+      font-size: 13px; color: var(--muted);
+      letter-spacing: 0.04em;
+      line-height: 1.7;
+    }
+    footer.site a { color: var(--muted); text-decoration: none; }
+    footer.site a:hover { color: var(--accent); }
+    @media (max-width: 720px) {
+      footer.site .container { flex-direction: column; align-items: flex-start; }
+      footer.site .footer-meta { text-align: left; }
+    }
+
+    /* Pullquote on hero / about */
+    .pullquote {
+      font-family: var(--serif);
+      font-size: 24px; font-style: italic;
+      color: var(--navy); font-weight: 500;
+      line-height: 1.4; letter-spacing: -0.005em;
+      padding: 24px 0 24px 28px;
+      border-left: 3px solid var(--navy);
+      max-width: 56ch;
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===================== NAVIGATION ===================== -->
+<nav class="site">
+  <div class="container">
+    <a href="#top" class="wordmark">Spyglass <span>Advisory</span></a>
+    <div class="nav-links">
+      <a href="#approach">Approach</a>
+      <a href="#services">Services</a>
+      <a href="#engagements">Engagements</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="container">
+    <div class="eyebrow">Spyglass Advisory</div>
+    <h1 class="hero-title">Business transformation at <em>execution inflection points.</em></h1>
+    <p class="hero-sub">
+      I work with companies at execution inflection points: PE-backed in the post-deal window, founder-led just after a raise, divisional leaders inside larger organizations, or any team moving cross-border into politically sensitive or regulated terrain. The opportunity is real, the capital is in place, but the operating model has not yet caught up. That gap is the work.
+    </p>
+    <div class="cta-row">
+      <a href="#services" class="btn btn-primary">See our engagements</a>
+      <a href="#contact" class="btn btn-secondary">Start a conversation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== APPROACH ===================== -->
+<section id="approach">
+  <div class="container">
+    <div class="section-eyebrow">Approach</div>
+    <h2 class="section-title">The work we do, defined clearly.</h2>
+    <p class="section-intro">
+      Spyglass is brought in when the strategy makes sense on paper, the capital is committed, and execution is the missing piece. I work directly with leadership and teams to design the operating structure that lets the plan land in the real world, then stay embedded to drive it. The work lives in unfamiliar markets, novel technology, and politically sensitive or regulated environments where the playbook hasn't been written yet. The regulatory piece is not compliance, it is sequencing and navigation, turning an approval pathway into an operating advantage.
+    </p>
+
+    <div class="pullquote">An inflection point is when the opportunity is real, but the current operating model will not get you there. Post-deal, post-raise, pilot-to-production, market entry into unfamiliar terrain. The moment the existing way of working stops being enough.</div>
+
+    <div class="approach-stack">
+      <div class="approach-row">
+        <div class="approach-label">Problems we solve</div>
+        <div class="approach-items">
+          <div class="approach-item">
+            <strong>The opportunity is real, but not yet operational.</strong>
+            <span>Capital is committed, technology proven, market identified. No executable path yet exists.</span>
+          </div>
+          <div class="approach-item">
+            <strong>Growth is the objective, but the terrain is unfamiliar.</strong>
+            <span>No playbook yet applies. Political, regulatory, institutional, cultural, or cross-border dynamics derail the standard approach.</span>
+          </div>
+          <div class="approach-item">
+            <strong>Execution is underway, but strategy must evolve in motion.</strong>
+            <span>Assumptions break. Constraints surface. Plans must adapt without losing momentum.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="approach-row">
+        <div class="approach-label">Outcomes we deliver</div>
+        <div class="approach-items">
+          <div class="approach-item">
+            <strong>An executable path forward.</strong>
+            <span>Clear priorities, sequencing, decision logic. Concept to action without unrealistic assumptions.</span>
+          </div>
+          <div class="approach-item">
+            <strong>Credible expansion into complex markets.</strong>
+            <span>Growth that holds up under regulatory, institutional, and operational realities.</span>
+          </div>
+          <div class="approach-item">
+            <strong>Adaptive momentum as conditions shift.</strong>
+            <span>The agile phase between concept and running it on rails. Plans evolve in motion. Teams stay decisive, not stalled.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services" class="alt">
+  <div class="container">
+    <div class="section-eyebrow">Services</div>
+    <h2 class="section-title">Three core engagements. Two specialized packages.</h2>
+    <p class="section-intro">
+      Three core engagements and two specialized packages, each scoped to a real situation with a defined deliverable and timeline. Spyglass prices on outcome, not on hours. The price is set with you against the actual scope, in writing, after a short conversation.
+    </p>
+
+    <div class="services-grid">
+
+      <div class="service">
+        <div class="service-meta">
+          <div class="name">Inflection Point Diagnostic</div>
+          <div class="price">2–3 weeks · Fixed price, set at scope</div>
+        </div>
+        <div class="service-content">
+          <p>A focused engagement that names the real bottleneck and produces a decision-ready executable plan. Filters serious situations from tire-kickers and converts at high rates into deeper engagements when the fit is right.</p>
+          <p><strong>Deliverables:</strong></p>
+          <ul>
+            <li>Diagnosis of the binding constraint (decision rights, capacity, incentives, friction)</li>
+            <li>Decision logic and sequencing</li>
+            <li>Stakeholder and power map</li>
+            <li>90-day execution plan with named owners</li>
+            <li>Recommendation: handoff or embed</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service">
+        <div class="service-meta">
+          <div class="name">Transformation Sprint</div>
+          <div class="price">30–60 days · Fixed price, set at scope</div>
+        </div>
+        <div class="service-content">
+          <p>A focused, time-boxed engagement that restructures the execution pathway so the work can actually run. Removes immediate blockers, aligns the team on priorities and decision rights, and ships something real that demonstrates momentum.</p>
+          <p><strong>Best fit:</strong> Companies with stalled transformations. Post-acquisition integration chaos. International expansion stuck on execution. Post-raise growth-stage scaleups facing their first regulated-market entry.</p>
+        </div>
+      </div>
+
+      <div class="service">
+        <div class="service-meta">
+          <div class="name">Embedded Transformation Lead</div>
+          <div class="price">6–12 months · Fixed price, set at scope</div>
+        </div>
+        <div class="service-content">
+          <p>A time-bound operating role. Spyglass stays involved through execution until the operating model stabilizes, then transitions out to an internal team. Outcomes by month. Not activities by week.</p>
+          <p><strong>Best fit:</strong> PE portfolio companies in post-deal transformation. Corporate clients in international expansion. Well-funded growth companies that need a senior operator at executive level without the headcount commitment.</p>
+        </div>
+      </div>
+
+      <div class="service specialty">
+        <div class="service-meta">
+          <div class="name">Latin America<br />Operating Diagnostic</div>
+          <div class="price">4 weeks · Fixed price, set at scope</div>
+        </div>
+        <div class="service-content">
+          <p>For companies operating, expanding, or building cross-border in Latin America. Covers nearshoring into Mexico, market entry across the region, and operating-layer work for existing Latin American footprints. Cross-border operational experience across Mexico, Colombia, Brazil, Chile, and Panama. The work turns a strategic decision into a working footprint.</p>
+          <p><strong>Includes:</strong> Regulatory and political-economy assessment, stakeholder mapping, local team recruitment strategy, partnership channel design, first 90-day execution plan, and introductions to 3–5 key contacts.</p>
+        </div>
+      </div>
+
+      <div class="service specialty">
+        <div class="service-meta">
+          <div class="name">AI Deployment<br />Diagnostic</div>
+          <div class="price">2–3 weeks · Fixed price, set at scope</div>
+        </div>
+        <div class="service-content">
+          <p>For PE portfolio companies, growth-stage operators, and divisional leaders inside larger organizations deploying AI into regulated, institutional, or operationally complex environments. Most often the buyer is the person with the discretionary budget and the real problem, not a giant-firm appetite. Roughly 86 percent of enterprise AI deployments fail, and most failures are organizational, not technical. The binding constraint is rarely the technology. It is decision rights, capability uptake, and incentive alignment. The operating layer.</p>
+          <p><strong>Includes:</strong> Use-case prioritization, capability assessment, deployment readiness audit, recommended sequencing, and a 90-day implementation roadmap.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ENGAGEMENTS ===================== -->
+<section id="engagements">
+  <div class="container">
+    <div class="section-eyebrow">Selected engagements</div>
+    <h2 class="section-title">A principal case at depth. The pattern across prior work.</h2>
+    <p class="section-intro">
+      The principal case below is in depth. Beneath it, selected engagements show the same pattern recurring across sectors and geographies: the opportunity is real, the operating layer is the constraint, and the work is to design that layer and stay embedded until it holds.
+    </p>
+
+    <div class="engagement">
+      <div class="engagement-header">
+        <div>
+          <div class="audience">Principal case · Cross-border biotech commercialization</div>
+          <h3>Post-Capital, Pre-Operational</h3>
+        </div>
+      </div>
+      <p class="summary">A first-of-kind biotech platform had real science, committed capital, and no clear path from R&amp;D to a deployed commercial facility. Embedded as operating lead, the work spanned a Mexico greenfield build under JV terms that preserved operational and IP control, first-of-kind regulatory approvals across three jurisdictions, and a byproduct certification pathway that produced roughly 15x value uplift. The company closed a $60M round during the COVID liquidity freeze. The unlock was not more activity; it was naming what actually had to happen and aligning the organization around it.</p>
+      <div class="outcomes">
+        <div><span>Round closed</span><strong>$60M</strong></div>
+        <div><span>Unit economics shift</span><strong>~15x byproduct uplift</strong></div>
+        <div><span>Engagement type</span><strong>Advisor → Embedded Operator</strong></div>
+      </div>
+      <a href="Spyglass_Case_Study_Ductor_PE_v1.pdf" class="read-more">Read the full case →</a>
+    </div>
+
+    <h3 class="vignette-section-title">Selected patterns from prior engagements</h3>
+    <p class="vignette-section-intro">The constraint pattern recurs. The institutions, sectors, and geographies vary.</p>
+
+    <div class="vignettes-grid">
+
+      <div class="vignette">
+        <div class="vignette-eyebrow">UK-Listed · Brazil · Chile · Poland · Turkey</div>
+        <h4>International build for a UK-listed infrastructure platform</h4>
+        <p class="vignette-body">Led international development across four jurisdictions for a UK-listed infrastructure platform. Built cross-functional execution cadence across technical, financial, and policy teams. Negotiated with ministries, utilities, and regulated stakeholders in each market.</p>
+        <div class="vignette-pattern">Cross-border commercialization translates. The constraint pattern repeats; the specific institutions vary.</div>
+      </div>
+
+      <div class="vignette">
+        <div class="vignette-eyebrow">IADB · Central America</div>
+        <h4>Multilateral-backed infrastructure for Central America</h4>
+        <p class="vignette-body">Designed market entry strategy for a US-based infrastructure platform across Central America. Aligned business model with multilateral funding requirements (Inter-American Development Bank). Coordinated funders, field teams, and government stakeholders across multiple jurisdictions.</p>
+        <div class="vignette-pattern">Making innovation legible to institutional capital is a translation problem, not a strategy problem.</div>
+      </div>
+
+      <div class="vignette">
+        <div class="vignette-eyebrow">IASP · 350+ hubs · 70+ countries</div>
+        <h4>Strategic advisory at a global innovation network</h4>
+        <p class="vignette-body">Strategic advisor to the leadership of an international association spanning 350+ innovation hubs across 70+ countries. Supporting strategic repositioning, partnership development, and revenue model evolution. AI commercialization strategy is a current thread.</p>
+        <div class="vignette-pattern">Pattern recognition across innovation ecosystems compounds. The lens that reads one market reads the next.</div>
+      </div>
+
+      <div class="vignette">
+        <div class="vignette-eyebrow">Active · PE-backed infrastructure · US · EU · UK</div>
+        <h4>Cross-border deal development for a PE-backed waste-to-value platform</h4>
+        <p class="vignette-body">Embedded advisor to a PE-backed portfolio company in waste-to-value infrastructure. Supporting multi-counterparty deal architecture, operational diligence, and cross-border partnership development across the US, Europe, and adjacent markets.</p>
+        <div class="vignette-pattern">Senior trust, sector fluency, and cross-border judgment quietly turn an advisory engagement into a strategic development partner.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="alt">
+  <div class="container">
+    <div class="section-eyebrow">About</div>
+    <h2 class="section-title">Jennifer Barber</h2>
+
+    <div class="about-text">
+      <p>
+        Spyglass Advisory is led by Jennifer Barber, an operator-turned-advisor with more than fifteen years of senior international experience across the US, Europe, and Latin America. Her career has been spent at the intersection of emerging technology, capital, and execution. Typically in environments where the technology is novel, the regulatory landscape is complex, and there isn't a clear playbook.
+      </p>
+      <p>
+        Most recently, she built the Americas division of a first-of-kind biotech platform from zero, navigating multi-country regulatory approvals, structuring a Mexico greenfield deployment during the pandemic, and supporting the company through a critical mid-pandemic funding round. Prior assignments include international development across Brazil, Chile, Poland, and Turkey for a UK-listed infrastructure platform; strategic advisory to a global innovation network spanning 350+ hubs across 70+ countries; and market entry strategy for Central America infrastructure projects with the Inter-American Development Bank.
+      </p>
+      <p>
+        She is <em>brought in at inflection points where the opportunity is real but the path is not</em>, typically by founders, CEOs, and investors operating across regulated or cross-border markets.
+      </p>
+    </div>
+
+    <div class="credentials">
+      <div>
+        <strong>Geography</strong>
+        US · UK · EU · Latin America
+      </div>
+      <div>
+        <strong>Languages</strong>
+        English · Spanish · French
+      </div>
+      <div>
+        <strong>Education</strong>
+        MIT Sloan AI &amp; Business Strategy
+      </div>
+      <div>
+        <strong>Status</strong>
+        US Citizen · EU Legal Residency
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-card">
+      <h2>Start a conversation.</h2>
+      <p>
+        Most Spyglass engagements begin with a short conversation. If you are at an inflection point (post-deal, post-raise, or pre-market entry), get in touch and we'll compare notes.
+      </p>
+      <a href="mailto:jennifer@spyglassadvisor.com" class="email">jennifer@spyglassadvisor.com</a>
+      <div class="meta">Based in Pennsylvania. Available across the US, Europe, and Latin America.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site">
+  <div class="container">
+    <div class="footer-brand">
+      <div class="footer-wordmark">Spyglass <span>Advisory</span></div>
+      <div class="footer-tagline">Strategy through execution.</div>
+    </div>
+    <div class="footer-meta">
+      <div>© 2026 Spyglass Advisory LLC · Pennsylvania, USA</div>
+      <div>
+        <a href="mailto:jennifer@spyglassadvisor.com">jennifer@spyglassadvisor.com</a>
+        &nbsp;·&nbsp;
+        <a href="https://linkedin.com/in/jenniferbarbersga" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
