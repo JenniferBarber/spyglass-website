@@ -167,8 +167,8 @@
     .approach-stack { display: grid; gap: 32px; }
     .approach-row {
       display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 48px;
+      grid-template-columns: 160px 1fr;
+      gap: 36px;
       padding: 36px 0;
       border-top: 1px solid var(--border);
     }
@@ -349,9 +349,10 @@
     }
 
     /* Contact */
+    section#contact { padding: 64px 0; }
     .contact-card {
       background: var(--navy); color: #FFFFFF;
-      padding: 56px 48px; border-radius: 6px;
+      padding: 44px 36px; border-radius: 6px;
       text-align: center;
     }
     .contact-card h2 {
@@ -434,6 +435,48 @@
       border-left: 3px solid var(--navy);
       max-width: 56ch;
       margin: 40px 0;
+    }
+
+    /* ===== Mobile (phone) ===== */
+    @media (max-width: 720px) {
+      .container { padding: 0 20px; }
+      section { padding: 56px 0; }
+      section.hero { padding: 56px 0 48px; }
+      section#contact { padding: 48px 0; }
+      h1.hero-title { font-size: clamp(34px, 9vw, 44px); margin-bottom: 22px; max-width: 100%; }
+      .hero-sub { font-size: 17px; margin-bottom: 28px; }
+      .hero-tagline { font-size: 16px; padding-left: 16px; margin-bottom: 32px; }
+      .cta-row { gap: 12px; }
+      .btn { padding: 12px 22px; font-size: 14px; }
+      h2.section-title { font-size: clamp(26px, 7vw, 32px); margin-bottom: 14px; }
+      .section-intro { font-size: 16px; margin-bottom: 36px; }
+      .section-eyebrow { font-size: 12px; margin-bottom: 12px; }
+      .pullquote { font-size: 19px; padding: 16px 0 16px 18px; margin: 28px 0; max-width: 100%; }
+      .approach-row { padding: 24px 0; }
+      .approach-label { font-size: 12px; }
+      .approach-item strong { font-size: 16px; }
+      .approach-item span { font-size: 15px; }
+      .card { padding: 24px 22px; }
+      .engagement { padding: 24px 22px; }
+      .engagement h3 { font-size: 20px; }
+      .engagement .summary { font-size: 15px; }
+      .engagement .outcomes { gap: 18px; padding-top: 14px; }
+      .vignette-section-title { font-size: 22px; margin-top: 48px; }
+      .vignette-section-intro { font-size: 15px; margin-bottom: 24px; }
+      .vignette { padding: 22px 20px; }
+      .vignette h4 { font-size: 17px; }
+      .vignette p.vignette-body { font-size: 14.5px; }
+      .vignette-pattern { font-size: 13.5px; }
+      .about-text { font-size: 16.5px; }
+      .credentials { gap: 22px; margin-top: 28px; padding-top: 24px; }
+      .contact-card { padding: 36px 22px; }
+      .contact-card h2 { font-size: 26px; }
+      .contact-card p { font-size: 16px; }
+      .contact-card a.email { font-size: 18px; padding: 12px 20px; }
+      .contact-card .meta { font-size: 13px; }
+      footer.site { padding: 32px 0 24px; }
+      nav.site .container { padding-top: 14px; padding-bottom: 14px; }
+      .wordmark { font-size: 19px; }
     }
   </style>
 </head>
