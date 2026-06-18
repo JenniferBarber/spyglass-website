@@ -131,7 +131,12 @@
       font-weight: 500; transition: color 120ms;
     }
     .nav-links a:hover { color: var(--accent); }
-    @media (max-width: 720px) { .nav-links { display: none; } }
+    .nav-contact { display: none; }
+    @media (max-width: 720px) {
+      .nav-links { display: none; }
+      .nav-contact { display: inline-flex; align-items: center; padding: 8px 18px; border: 1.5px solid var(--navy); border-radius: 4px; color: var(--navy); font-size: 14px; font-weight: 600; text-decoration: none; transition: background 150ms, color 150ms; }
+      .nav-contact:hover { background: var(--navy); color: #fff; }
+    }
 
     /* Hero */
     section.hero {
@@ -563,6 +568,7 @@
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </div>
+    <a href="#contact" class="nav-contact">Contact</a>
   </div>
 </nav>
 
