@@ -592,6 +592,37 @@
     .page-quote { padding: 48px 0; }
     .page-quote p { font-style: italic; color: var(--accent); max-width: 30ch; }
     .engagement, .vignette { background: var(--panel); }
+    /* ===== v11 type scale: one intentional system ===== */
+    /* Eyebrows and labels: two tiers, both uppercase 600 accent */
+    .eyebrow, .section-eyebrow, .approach-label { font-size: 14px; letter-spacing: 0.18em; font-weight: 600; }
+    .vignette-eyebrow { font-size: 12px; letter-spacing: 0.16em; font-weight: 600; }
+    .credentials > div strong { font-size: 12px; }
+    /* Serif headings: weight 500, two card-title tiers */
+    h1.hero-title, h2.section-title, .service-meta .name, .engagement h3, .vignette h4, .contact-card h2 { font-weight: 500; }
+    .service-meta .name, .engagement h3 { font-size: 21px; }
+    .vignette h4 { font-size: 18px; }
+    /* Lead paragraphs: 18, hero one step larger */
+    .hero-sub { font-size: 20px; font-weight: 400; }
+    .section-intro { font-size: 18px; }
+    .about-text { font-size: 18px; }
+    .contact-card p { font-size: 18px; }
+    /* Body: 16 everywhere */
+    .service-content p, .service-content li, .engagement .summary, .case-list li, .approach-item span, .vignette p.vignette-body { font-size: 16px; }
+    .approach-item strong { font-size: 16px; font-weight: 600; }
+    .vignette-pattern { font-size: 14px; }
+    /* Remove the uneven first-line emphasis */
+    .section-intro::first-line { font-weight: 400; }
+    /* Wordmark: header prominent, footer modest, same weight */
+    .wordmark { font-size: 24px; font-weight: 500; }
+    footer.site .footer-brand .footer-wordmark { font-size: 20px; font-weight: 500; }
+    @media (max-width: 720px) {
+      .hero-sub { font-size: 18px; }
+      .section-intro, .about-text, .contact-card p { font-size: 17px; }
+      .service-meta .name, .engagement h3 { font-size: 20px; }
+      .vignette h4 { font-size: 18px; }
+      .wordmark { font-size: 22px; }
+      footer.site .footer-brand .footer-wordmark { font-size: 19px; }
+    }
   </style>
 </head>
 <body>
