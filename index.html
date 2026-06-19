@@ -553,6 +553,43 @@
       nav.site .container { padding-top: 14px; padding-bottom: 14px; }
       .wordmark { font-size: 19px; }
     }
+    /* ===== v10 design ===== */
+    .wordmark { font-size: 26px; }
+    #services, #engagements, #about, #contact { border-top: 1px solid rgba(58, 110, 159, 0.5); }
+    .section-intro::first-line { font-weight: 500; }
+
+    /* Inverted Approach section */
+    section.invert { background: var(--navy); }
+    section.invert .section-title { color: #FFFFFF; }
+    section.invert .section-intro { color: rgba(255, 255, 255, 0.82); }
+    section.invert .section-eyebrow { color: #8FB3D9; }
+    section.invert .pullquote { color: #FFFFFF; border-left-color: #8FB3D9; }
+    section.invert .approach-row { border-top-color: rgba(255, 255, 255, 0.18); }
+    section.invert .approach-row:last-child { border-bottom-color: rgba(255, 255, 255, 0.18); }
+    section.invert .approach-label { color: #8FB3D9; }
+    section.invert .approach-item { border-left-color: #8FB3D9; }
+    section.invert .approach-item strong { color: #FFFFFF; }
+    section.invert .approach-item span { color: rgba(255, 255, 255, 0.82); }
+
+    /* Ductor case bullet list */
+    .case-list { margin: 0 0 14px; padding-left: 20px; }
+    .case-list li { color: var(--text); font-size: 16px; line-height: 1.6; margin-bottom: 8px; }
+    .case-list li::marker { color: var(--accent); }
+
+    /* Stat strip (case hook) */
+    .stat-strip { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin: 0 0 24px; font-size: 15px; font-weight: 600; color: var(--navy); }
+    .stat-strip span:not(:last-child)::after { content: "·"; margin-left: 16px; color: var(--accent); }
+
+    /* Page pull-quote */
+    .page-quote { padding: 88px 0; text-align: center; }
+    .page-quote p { font-family: var(--serif); font-size: clamp(26px, 4vw, 40px); font-weight: 500; line-height: 1.3; color: var(--navy); max-width: 24ch; margin: 0 auto; }
+
+    @media (max-width: 720px) {
+      .wordmark { font-size: 23px; }
+      .stat-strip { flex-direction: column; gap: 6px; }
+      .stat-strip span:not(:last-child)::after { display: none; }
+      .page-quote { padding: 56px 0; }
+    }
   </style>
 </head>
 <body>
@@ -575,10 +612,10 @@
 <!-- ===================== HERO ===================== -->
 <section class="hero" id="top">
   <div class="container">
-    <div class="eyebrow">Spyglass Advisory</div>
+    <div class="eyebrow">Strategy through execution</div>
     <h1 class="hero-title">Business transformation at <em>execution inflection points.</em></h1>
     <p class="hero-sub">
-      Spyglass works with PE-backed companies in the post-deal window, founder-led companies scaling up, divisional leaders inside larger organizations, and operators moving cross-border or into politically sensitive or regulatory terrain. The opportunity is real, but the operating model is still being built for it. That is the problem space where Spyglass thrives.
+      Spyglass Advisory works with founder-led companies scaling up, divisional leaders inside larger organizations, operators moving cross-border or into politically sensitive or regulatory terrain, and PE-backed companies in the post-deal value-creation window. The opportunity is real, but the operating model is still being built for it. That is the problem space where Spyglass Advisory thrives.
     </p>
     <div class="cta-row">
       <a href="#services" class="btn btn-primary">See our engagements</a>
@@ -588,12 +625,12 @@
 </section>
 
 <!-- ===================== APPROACH ===================== -->
-<section id="approach">
+<section id="approach" class="invert">
   <div class="container">
     <div class="section-eyebrow">Approach</div>
     <h2 class="section-title">The work we do.</h2>
     <p class="section-intro">
-      Spyglass is brought in when the direction is clear but the path is not yet mapped. Sometimes execution has started, but the operating model is not holding. Sometimes the work is novel enough that the right moves only become clear in motion. Sometimes the missing piece is capacity. Spyglass works directly with leadership and the teams executing the work to design the operating structure that lets the plan land in the real world, then stays embedded to drive it.
+      Spyglass Advisory is brought in when the destination is clear, but the path to it is not yet mapped. Sometimes execution has started, but the operating model is not holding. Other times the work is novel enough that the right moves only become clear in motion. And sometimes the missing piece is capacity. Spyglass Advisory works directly with leadership and the teams executing the work to design the operating structure that lets the plan land in the real world, then stays embedded to drive it.
     </p>
     <p class="section-intro">
       Our work lives in unfamiliar markets, novel technology, and politically sensitive or regulatory environments where the playbook is unwritten, ambiguous, or in motion.
@@ -690,7 +727,7 @@
         <div class="service-meta">
           <div class="name">Embedded Transformation Lead</div>        </div>
         <div class="service-content">
-          <p>A time-bound operating role. Spyglass stays involved through execution until the operating model stabilizes, then transitions out to an internal team. Outcomes by month. Not activities by week.</p>
+          <p>A time-bound operating role. Spyglass Advisory stays involved through execution until the operating model stabilizes, then transitions out to an internal team. Outcomes by month. Not activities by week.</p>
           <p>By the end the operating model holds without us, with the team running the cadence, the decisions documented, and the handoff complete.</p>
           <p><strong>Best fit:</strong> PE portfolio companies in post-deal transformation. Corporate clients in international expansion. Well-funded growth companies that need a senior operator at executive level without the headcount commitment.</p>
         </div>
@@ -721,6 +758,13 @@
   </div>
 </section>
 
+<!-- ===================== PULL QUOTE ===================== -->
+<section class="page-quote">
+  <div class="container">
+    <p>Strategy is necessary. Operating reality is what decides whether it lands.</p>
+  </div>
+</section>
+
 <!-- ===================== ENGAGEMENTS ===================== -->
 <section id="engagements">
   <div class="container">
@@ -735,8 +779,17 @@
           <h3>Post-Capital, Pre-Operational</h3>
         </div>
       </div>
+      <div class="stat-strip">
+        <span>One commercial facility, deployed.</span>
+        <span>~15x co-product uplift.</span>
+        <span>Joint venture with TotalEnergies, scaling to 15 to 20 facilities worldwide.</span>
+      </div>
       <p class="summary">Ductor, a European technology platform with real science and committed capital, had no playbook for getting from R&amp;D to a commercial facility in the Americas. The engagement began as a commercialization advisory role and grew into an operating one, leading the Americas and building the division from zero.</p>
-      <p class="summary">The work crossed borders, languages, and disciplines. A Mexico facility delivered through a joint venture structured to preserve operational and IP control. Multi-country team coordination across the US, Finland, and Mexico, with specialty teams operating under different cultural and institutional defaults.</p>
+      <p class="summary">The work crossed borders, languages, and disciplines:</p>
+      <ul class="case-list">
+        <li>A Mexico facility delivered through a joint venture structured to preserve operational and IP control.</li>
+        <li>Multi-country team coordination across the US, Finland, and Mexico, with specialty teams operating under different cultural and institutional defaults.</li>
+      </ul>
       <p class="summary">The business model adapted as the market and regulatory environment revealed themselves. A co-product re-priced through a first-of-its-kind US certification (CDFA Organic) created roughly 15x value uplift and made the platform financeable. The work ran through commissioning during the COVID liquidity freeze. The company closed a growth-capital round in the same period.</p>
       <p class="summary">The facility is still operating today. The commercial model it proved is scaling worldwide through a joint venture with TotalEnergies, targeting 15 to 20 facilities.</p>
       <div class="outcomes">
@@ -791,7 +844,7 @@
         The work has spanned UNESCO in Paris, where I translated IPCC climate science for governments that needed it to land politically; a founder-led, London-based platform, where I built the international development arm across Brazil, Chile, and Poland; and a first-of-kind European technology platform, where I served as embedded operating lead through cross-border commercialization across the Americas, multi-country team coordination, a first-of-its-kind US certification, a Fortune-scale joint venture, and a growth-capital raise during the COVID liquidity freeze.
       </p>
       <p>
-        Spyglass is a principal-led business transformation practice. Clients always get Jennifer as the constant. Senior specialist partners are sourced engagement by engagement; the bench flexes around the work.
+        Spyglass Advisory is a principal-led business transformation practice. Clients always get Jennifer as the constant. Senior specialist partners are sourced engagement by engagement; the bench flexes around the work.
       </p>
     </div>
 
@@ -815,7 +868,7 @@
     <div class="contact-card">
       <h2>Start a conversation.</h2>
       <p>
-        Most Spyglass engagements begin with a short conversation. If you are exploring paths forward, get in touch. We'll compare notes and see whether the work fits.
+        Most Spyglass Advisory engagements begin with a short conversation. If you are exploring paths forward, get in touch. We'll compare notes and see whether the work fits.
       </p>
       <a href="mailto:inquiries@spyglassadvisor.com" class="email">inquiries@spyglassadvisor.com</a>
       <div class="meta">Based in Pennsylvania's New York-Philadelphia corridor. Available across the US, Europe, and Latin America.</div>
