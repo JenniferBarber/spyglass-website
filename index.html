@@ -593,10 +593,7 @@
     /* ===== v10b polish ===== */
     .page-quote { padding: 48px 0; }
     .page-quote p { font-style: italic; color: var(--accent); max-width: 30ch; }
-    #engagements { position: relative; overflow: hidden; }
-    #engagements .container { position: relative; z-index: 1; }
-    .bg-scale { position: absolute; top: 8px; right: -24px; z-index: 0; pointer-events: none; font-family: var(--serif); font-weight: 500; font-size: clamp(120px, 20vw, 280px); line-height: 1; letter-spacing: -0.02em; color: var(--navy); opacity: 0.05; white-space: nowrap; }
-    @media (max-width: 720px) { .bg-scale { display: none; } }
+    #engagements { background: var(--panel); }
   </style>
 </head>
 <body>
@@ -778,7 +775,6 @@
 
 <!-- ===================== ENGAGEMENTS ===================== -->
 <section id="engagements">
-  <div class="bg-scale" aria-hidden="true">Spyglass</div>
   <div class="container">
     <div class="section-eyebrow">Selected engagements</div>
     <h2 class="section-title">Case studies.</h2>
