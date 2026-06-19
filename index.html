@@ -191,7 +191,7 @@
     .btn-secondary:hover { background: var(--panel); }
 
     /* Section base */
-    section { padding: 100px 0; }
+    section { padding: 84px 0; }
     section.alt { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     h2.section-title {
       font-family: var(--serif);
@@ -207,7 +207,7 @@
       line-height: 1.5;
     }
     .section-eyebrow {
-      font-size: 13px; letter-spacing: 0.18em;
+      font-size: 14px; letter-spacing: 0.18em;
       text-transform: uppercase; font-weight: 600;
       color: var(--accent); margin-bottom: 16px;
     }
@@ -590,6 +590,13 @@
       .stat-strip span:not(:last-child)::after { display: none; }
       .page-quote { padding: 56px 0; }
     }
+    /* ===== v10b polish ===== */
+    .page-quote { padding: 48px 0; }
+    .page-quote p { font-style: italic; color: var(--accent); max-width: 30ch; }
+    #engagements { position: relative; overflow: hidden; }
+    #engagements .container { position: relative; z-index: 1; }
+    .bg-scale { position: absolute; top: 8px; right: -24px; z-index: 0; pointer-events: none; font-family: var(--serif); font-weight: 500; font-size: clamp(120px, 20vw, 280px); line-height: 1; letter-spacing: -0.02em; color: var(--navy); opacity: 0.05; white-space: nowrap; }
+    @media (max-width: 720px) { .bg-scale { display: none; } }
   </style>
 </head>
 <body>
@@ -690,6 +697,8 @@
 
     <div class="services-grid">
 
+      <div class="section-eyebrow group-label">Engagement shapes</div>
+
       <div class="service">
         <div class="service-meta">
           <div class="name">Inflection Point Diagnostic</div>        </div>
@@ -733,6 +742,8 @@
         </div>
       </div>
 
+      <div class="section-eyebrow group-label" style="margin-top: 24px;">Specialty diagnostics</div>
+
       <div class="service specialty">
         <div class="service-meta">
           <div class="name">US-Latin America<br />Operating Diagnostic</div>        </div>
@@ -767,6 +778,7 @@
 
 <!-- ===================== ENGAGEMENTS ===================== -->
 <section id="engagements">
+  <div class="bg-scale" aria-hidden="true">Spyglass</div>
   <div class="container">
     <div class="section-eyebrow">Selected engagements</div>
     <h2 class="section-title">Case studies.</h2>
